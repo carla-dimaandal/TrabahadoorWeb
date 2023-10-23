@@ -16,16 +16,12 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     width: 100%;
     height: auto;
-}
-
-h1 {
-    line-height: 1.5;
 }
 
 .navbar {
@@ -34,10 +30,9 @@ h1 {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    top: 0;
-    left: 0;
-    padding: 1rem 2.5rem;
-    z-index: 10;
+    margin:auto;
+    padding: 1rem 2rem;
+    z-index: 5;
     color:var(--whiteColor);
     background: var(--primaryColor);
 }
@@ -46,34 +41,40 @@ h1 {
     letter-spacing: 2.5;
     text-decoration: none;
     color:var(--whiteColor);
-
-
 }
 
 .navbar-menu {
-    width:400px;
+    width:500px;
     display:flex;
     justify-content:space-between;
+    font-weight:540;
 }
 
 .navbar-menu > a {
-    color:var(--whiteColor);
+    color:gainsboro;
     text-decoration:none;
     text-align: center;
-    transition: 0.15s ease-in-out;
     position: relative;
-
+    letter-spacing: 0.5px;
+    z-index: 1;
+    padding: 0 10px;
 }
-.navbar-menu a::after {
+.navbar-menu a:after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
+    background-color: #1d2d44;
     width: 0;
-    height: 1px;
-    transition: 0.15s ease-in-out;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    transition: 0.3s;
 }
-.navbar-menu a:hover:after {width: 100%;}
+.navbar-menu a:hover{
+    color:var(--whiteColor);
+}
+.navbar-menu a:hover:after {
+    width: 100%;
+}
 
 /*logo of hamburger menu*/
 .open-menu {
@@ -138,7 +139,7 @@ h1 {
 header{
     width: 100%;
     height: 80%;
-    background-image: url(main-header.png);
+    background-image: url(main-header-img.png);
     background-color:var(--primaryColor);
     background-position: center;
     background-repeat: no-repeat;
@@ -151,16 +152,15 @@ header{
     top: 7rem;
     left: 3rem;
     letter-spacing: 3;
-    font-weight: bolder;
-    font-size: 52px;
+    font-weight: bold;
+    font-size:clamp(2rem, 5vw, 4.5rem);
     color:var(--blueColor);
     text-shadow: 4px 2px 0px rgba(0, 0, 0, 0, 2);
 }
 
 .header-title > span {
-    color:var(--primaryColor);
-
-}
+    color:#748cab;
+}   
 
 .heading{
     text-align:center;
@@ -258,6 +258,59 @@ header{
     color:var(--whiteColor);
     transition: .3s;
 }
+/* login form */
+.container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+}
+
+.container .content{
+   text-align: center;
+}
+
+.container .content h3{
+   font-size: 30px;
+   color: var(--primaryColor);
+}
+
+.container .content h3 span{
+   background: rgb(90, 20, 220);
+   color: #fff;
+   border-radius: 5px;
+   padding:0 10px;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:#333;
+}
+
+.container .content h1 span{
+   color:rgb(20, 43, 220);
+}
+
+.container .content p{
+   font-size: 25px;
+   margin-bottom: 20px;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:10px 30px;
+   font-size: 20px;
+   background: #333;
+   color:#fff;
+   margin:0 5px;
+   text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+   background: var(--blueColor);
+}
 
 .form-container{
    min-height: 100vh;
@@ -281,7 +334,7 @@ header{
    font-size: 30px;
    text-transform: uppercase;
    margin-bottom: 10px;
-   color:#333;
+   color:var(--blueColor);
 }
 
 .form-container form input,
@@ -299,7 +352,7 @@ header{
 }
 
 .form-container form .form-btn{
-   background: #0800ff;
+   background:var(--primaryColor);
    color:rgb(255, 255, 255);
    text-transform: capitalize;
    font-size: 20px;
@@ -307,7 +360,7 @@ header{
 }
 
 .form-container form .form-btn:hover{
-   background: rgba(17, 5, 110, 0.564);
+   background: var(--blueColor);
    color:#fff;
 }
 
@@ -324,7 +377,7 @@ header{
 .form-container form .error-msg{
    margin:10px 0;
    display: block;
-   background: rgb(79, 4, 228);
+   background: rgb(39, 5, 107);
    color:#fff;
    border-radius: 5px;
    font-size: 20px;
