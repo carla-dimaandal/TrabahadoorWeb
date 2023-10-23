@@ -175,7 +175,7 @@ header .header-img{
     text-align:justify;
     left:3rem;
     font-weight:400;
-    font-size:1rem;
+    font-size: max(.5em, 1.2vw);
 }
 .header-title > span {
     color:#748cab;
