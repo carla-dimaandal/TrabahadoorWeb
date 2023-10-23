@@ -177,9 +177,6 @@ header .header-img{
     font-weight:400;
     font-size: max(.5em, 1.2vw);
 }
-.header-title > span {
-    color:#748cab;
-}   
 
 .heading{
     text-align:center;
@@ -188,10 +185,6 @@ header .header-img{
     padding:1rem;
     margin: 2rem 0;
     background:var(--whiteColor);
-}
-
-.heading span{
-    color:#748cab;
 }
 
 .explore-container{
